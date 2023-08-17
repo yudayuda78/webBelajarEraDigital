@@ -1,7 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Models\isiContent;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,19 +30,8 @@ Route::get('/register', function () {
 
 
 
-Route::get('/beranda', function () {
-       
-    return view('beranda', [
-        "isiContent" => isiContent::all()
-
-    ]);
-});
+Route::get('/beranda', [ContentController::class, 'index']);
 
 
 //halaman single post
-Route::get('konten/{slug}', function($slug) {
-
-    return view('konten', [
-        "content" => isiContent::find($slug)
-    ]);
-});
+Route::get('konten/{slug}', [ContentController::class, 'show']);
