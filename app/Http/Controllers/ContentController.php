@@ -14,9 +14,9 @@ class ContentController extends Controller
         ]);
     }
 
-    public function show($slug){
+    public function show( isiContent $isiContent){
         return view('konten', [
-            "content" => isiContent::find($slug)
+            "content" => $isiContent
         ]);
     }
 }

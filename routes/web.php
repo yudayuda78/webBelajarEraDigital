@@ -34,4 +34,4 @@ Route::get('/beranda', [ContentController::class, 'index']);
 
 
 //halaman single post
-Route::get('konten/{slug}', [ContentController::class, 'show']);
+Route::get('/konten/{isiContent:slug}', [ContentController::class, 'show']);
