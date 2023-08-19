@@ -1,50 +1,14 @@
-<?php 
-
+<?php
 
 namespace App\Models;
 
-class isiContent{
-    private static $isiContent = [
-        [
-            "title" => "judul pertama",
-            "slug" => "judul-pertama",
-            "category" => "modul ajar",
-            "image" => "content1.png",
-            "file" => "content.pdf",
-            "deskripsi" => "modul ajar ini adlaah judul pertama"
-        ],
-        [
-            "title" => "judul kedua",
-            "slug" => "judul-kedua",
-            "category" => "modul ajar",
-            "image" => "content1.png",
-            "file" => "content.pdf",
-            "deskripsi" => "modul ajar ini adlaah judul kedua"
-        ]
-    ];
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-    public static function all()
-    {
+class isiContent extends Model
+{
+    use HasFactory;
+    
 
-        return self::$isiContent;
-
-    }
-
-    public static function find($slug)
-    {
-        $contents = self::$isiContent;
-
-        $content = [];
-        foreach($contents as $con){
-            if($con["slug"] == $slug) {
-                $content = $con;
-            }
-        }
-
-        return $content;
-    }
+    protected $fillable = ['title', 'category', 'image', 'file'];
 }
-
-
-
-?>

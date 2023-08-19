@@ -67,9 +67,9 @@ footer{
         </div> 
     </nav>
     
-    <img src="{{ $content["image"] }}" alt="kosong">
-    <h1>{{ $content["title"] }}</h1>
-    <h2>{{ $content["deskripsi"] }}</h2>
+    <img src="{{ $content->image }}" alt="kosong">
+    <h1>{{ $content->title }}</h1>
+    <h2>{{ $content->deskripsi }}</h2>
     <button>Download</button>
     <a href="/beranda">Back</a>
 

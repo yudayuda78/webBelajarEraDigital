@@ -52,7 +52,7 @@
         <div class="card col-1" style="width: 18rem;">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text"><a href="/konten/{{ $isi["slug"] }}">{{ $isi["title"] }}</a></p>
+              <p class="card-text"><a href="/konten/{{ $isi->id }}">{{ $isi->title }}</a></p>
             </div>
         </div>
         @endforeach
