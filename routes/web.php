@@ -2,7 +2,10 @@
 
 use App\Models\isiContent;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\RegisterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +22,9 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', [LoginController::class, 'index']);
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::get('/register', [RegisterController::class, 'index']);
 
 
 
@@ -35,3 +34,13 @@ Route::get('/beranda', [ContentController::class, 'index']);
 
 //halaman single post
 Route::get('/konten/{isiContent:slug}', [ContentController::class, 'show']);
+
+
+
+
+//rute filter
+Route::get('/content/filter', [ContentController::class, 'filter'])->name('content.filter');
+
+
+//rute login
+

@@ -19,6 +19,7 @@ class CreateIsiContentsTable extends Migration
             $table->string('slug')->unique();
             $table->string('deskripsi');
             $table->string('category');
+            $table->string('kelas');
             $table->string('image');
             $table->string('file');
             $table->timestamps();

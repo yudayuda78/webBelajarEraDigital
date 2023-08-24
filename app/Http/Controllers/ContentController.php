@@ -19,4 +19,22 @@ class ContentController extends Controller
             "content" => $isiContent
         ]);
     }
+
+    public function filter(Request $request)
+    {
+    $category = $request->category;
+
+    if ($category) {
+        $isiContent = isiContent::where('category', $category)->get();
+    } else {
+        $isiContent = isiContent::all();
+    }
+
+    return view('beranda', [
+        "isiContent" => $isiContent
+    ]);
+    }
+
+
+
 }
