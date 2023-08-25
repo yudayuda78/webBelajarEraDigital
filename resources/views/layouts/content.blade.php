@@ -5,7 +5,7 @@
         <option value="">All Categories</option>
         <option value="game" {{ request('category') == 'game' ? 'selected' : '' }}>Game</option>
         <option value="modul ajar" {{ request('category') == 'modul ajar' ? 'selected' : '' }}>Modul Ajar</option>
-        <option value="rpp" {{ request('category') == 'rpp' ? 'selected' : '' }}>RPP</option>
+        <option value="lkpd" {{ request('category') == 'lkpd' ? 'selected' : '' }}>LKPD / Worksheet</option>
         <option value="bahan ajar" {{ request('category') == 'bahan ajar' ? 'selected' : '' }}>Bahan Ajar</option>
     </select>
     {{-- <button type="submit" class="btn btn-primary">Filter</button> --}}

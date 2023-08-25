@@ -70,7 +70,8 @@ footer{
     <img src="{{ $content->image }}" alt="kosong">
     <h1>{{ $content->title }}</h1>
     <h2>{{ $content->deskripsi }}</h2>
-    <button>Download</button>
+    <a href="{{ route('content.download', ['id' => $content->id]) }}" class="btn btn-primary">Download</a>
+    
     <a href="/beranda">Back</a>
 
 

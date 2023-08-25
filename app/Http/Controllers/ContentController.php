@@ -35,6 +35,12 @@ class ContentController extends Controller
     ]);
     }
 
+    public function download($id)
+    {
+        $filedownload = isiContent::where('id', $id)->first();
+        $pathToFile = public_path("img/{$filedownload->file}");
+        return \Response::download($pathToFile);
+    }
 
 
 }

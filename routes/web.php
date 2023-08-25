@@ -19,7 +19,7 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('beranda');
 });
 
 Route::get('/login', [LoginController::class, 'index']);
@@ -42,5 +42,8 @@ Route::get('/konten/{isiContent:slug}', [ContentController::class, 'show']);
 Route::get('/content/filter', [ContentController::class, 'filter'])->name('content.filter');
 
 
-//rute login
+//rute download
+Route::get('/download/{id}', [ContentController::class, 'download'])->name('content.download');
+
+
 
