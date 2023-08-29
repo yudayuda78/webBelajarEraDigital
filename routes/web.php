@@ -18,13 +18,14 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('beranda');
-});
+Route::get('/', [ContentController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index']);
 
+
+//route register
 Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'store']);
 
 
 
