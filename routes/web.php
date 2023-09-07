@@ -4,6 +4,7 @@ use App\Models\isiContent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\editprofil;
 use App\Http\Controllers\RegisterController;
 
 
@@ -20,8 +21,9 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', [ContentController::class, 'index']);
 
-Route::get('/login', [LoginController::class, 'index']);
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 
 //route register
@@ -31,7 +33,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 
 
-Route::get('/beranda', [ContentController::class, 'index']);
+Route::get('/beranda', [ContentController::class, 'index'])->middleware('guest');
 
 
 //halaman single post
@@ -46,6 +48,9 @@ Route::get('/content/filter', [ContentController::class, 'filter'])->name('conte
 
 //rute download
 Route::get('/download/{id}', [ContentController::class, 'download'])->name('content.download');
+
+//edit profil
+Route::get('/editprofil', [editprofil::class, 'show']);
 
 
 
