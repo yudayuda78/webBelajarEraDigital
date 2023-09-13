@@ -12,91 +12,112 @@
 
 @section('container')
     <div class="background">
-        <form action="/register" method="POST" id="registerForm">
+        <section>
+            <div class="daun">
+                <div class="set">
+                    <div><img src="asset/daun2.webp" alt=""></div>
+                    <div><img src="asset/bunga.webp" alt=""></div>
+                    <div><img src="asset/daun2.webp" alt=""></div>
+                    <div><img src="asset/bunga.webp" alt=""></div>
+                    <div><img src="asset/daun2.webp" alt=""></div>
+                    <div><img src="asset/bunga.webp" alt=""></div>
+                    <div><img src="asset/daun2.webp" alt=""></div>
+                    <div><img src="asset/bunga.webp" alt=""></div>
+                </div>
+            </div>
+            <img src="asset/back.webp" alt="" class="bg">
+            <img src="asset/burung.webp" alt="" class="burung">
+            <form action="/register" method="POST" id="registerForm">
 
-            @csrf
+                @csrf
 
-            <ul>
-                <h1>Daftar</h1>
-                <div class="form-section current" id="section1">
-                    <!-- Langkah 1 -->
-                    <!-- Form fields for username and password -->
-                    <li>
-                        <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
-                            id="username" placeholder="username">
-                        @error('username')
-                            <div class="invalid-tooltip">
-                                Masukan username yang benar
-                            </div>
-                        @enderror
-                    </li>
-                    <li>
-                        <input type="email" name="email" class="form-control @error('enail') is-invalid @enderror"
-                            id="email" placeholder="email">
-                        @error('email')
-                            <div class="invalid-tooltip">
-                                Please provide a valid city.
-                            </div>
-                        @enderror
-                    </li>
-                    <li>
-                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
-                            id="password" placeholder="password">
-                        @error('password')
-                            <div class="invalid-tooltip">
-                                Please provide a valid city.
-                            </div>
-                        @enderror
-                    </li>
-                </div>
-                <div class="form-section" id="section2">
-                    <!-- Langkah 2 -->
-                    <!-- Form fields for full name and phone number -->
-                    <li>
-                        <input type="text" name="namalengkap"
-                            class="form-control @error('namalengkap') is-invalid @enderror" id="namalengkap"
-                            placeholder="nama lengkap">
-                        @error('namalengkap')
-                            <div class="invalid-tooltip">
-                                Please provide a valid city.
-                            </div>
-                        @enderror
-                    </li>
-                    <li>
-                        <input type="text" name="nomortelepon"
-                            class="form-control @error('nomortelepon') is-invalid @enderror" id="nomortelepon"
-                            placeholder="nomor telepon">
-                        @error('nomortelepon')
-                            <div class="invalid-tooltip">
-                                Please provide a valid city.
-                            </div>
-                        @enderror
-                    </li>
-                    <li>
-                        <input type="text" name="pekerjaan" class="form-control @error('pekerjaan') is-invalid @enderror"
-                            id="pekerjaan" placeholder="pekerjaan">
-                        @error('pekerjaan')
-                            <div class="invalid-tooltip">
-                                Please provide a valid city.
-                            </div>
-                        @enderror
-                    </li>
-                </div>
-                <div class="form-navigation mt-3">
-                    <li>
-                        <button type="button" class="previous btn btn-primary">Previous</button>
-                    </li>
-                    <li>
-                        <button type="button" class="next btn btn-primary">Next</button>
-                    </li>
-                    <li>
-                        <button type="submit" class="btn btn-primary" id="submitButton"
-                            style="display: none;">Submit</button>
-                    </li>
-                </div>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </form>
+                <ul>
+                    <h1>Daftar</h1>
+                    <div class="form-section current" id="section1">
+                        <!-- Langkah 1 -->
+                        <!-- Form fields for username and password -->
+                        <li>
+                            <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
+                                id="username" placeholder="username">
+                            @error('username')
+                                <div class="invalid-tooltip">
+                                    Masukan username yang benar
+                                </div>
+                            @enderror
+                        </li>
+                        <li>
+                            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
+                                id="email" placeholder="email">
+                            @error('email')
+                                <div class="invalid-tooltip">
+                                    Masukan email yang benar
+                                </div>
+                            @enderror
+                        </li>
+                        <li>
+                            <input type="password" name="password"
+                                class="form-control @error('password') is-invalid @enderror" id="password"
+                                placeholder="password">
+                            @error('password')
+                                <div class="invalid-tooltip">
+                                    Masukan password yang benar
+                                </div>
+                            @enderror
+                        </li>
+                    </div>
+                    <div class="form-section" id="section2">
+                        <!-- Langkah 2 -->
+                        <!-- Form fields for full name and phone number -->
+                        <li>
+                            <input type="text" name="namalengkap"
+                                class="form-control @error('namalengkap') is-invalid @enderror" id="namalengkap"
+                                placeholder="nama lengkap">
+                            @error('namalengkap')
+                                <div class="invalid-tooltip">
+                                    Masukan nama yang benar
+                                </div>
+                            @enderror
+                        </li>
+                        <li>
+                            <input type="text" name="nomortelepon"
+                                class="form-control @error('nomortelepon') is-invalid @enderror" id="nomortelepon"
+                                placeholder="nomor telepon">
+                            @error('nomortelepon')
+                                <div class="invalid-tooltip">
+                                    Masukan nomor WA yang benar
+                                </div>
+                            @enderror
+                        </li>
+                        <li>
+                            <input type="text" name="pekerjaan"
+                                class="form-control @error('pekerjaan') is-invalid @enderror" id="pekerjaan"
+                                placeholder="pekerjaan">
+                            @error('pekerjaan')
+                                <div class="invalid-tooltip">
+                                    Please provide a valid city.
+                                </div>
+                            @enderror
+                        </li>
+                    </div>
+                    <div class="form-navigation mt-3 next-prev-con">
+                        <li>
+                            <button type="button" class="previous btn btn-primary next-prev">Previous</button>
+                        </li>
+                        <li>
+                            <button type="button" class="next btn btn-primary next-prev">Next</button>
+                        </li>
+
+                    </div>
+                    <div class="form-navigation mt-3 sub">
+                        <li>
+                            <button type="submit" class="btn btn-primary" id="submitButton"
+                                style="display: none;">Submit</button>
+                        </li>
+                    </div>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </form>
+        </section>
     </div>
 
     <script>

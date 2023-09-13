@@ -20,6 +20,7 @@ class CreateIsiContentsTable extends Migration
             $table->string('deskripsi');
             $table->string('category');
             $table->string('kelas');
+            $table->string('matapelajaran');
             $table->string('image');
             $table->string('file');
             $table->timestamps();

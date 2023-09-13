@@ -27,8 +27,8 @@ Route::post('/logout', [LoginController::class, 'logout']);
 
 
 //route register
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 
 
 
@@ -50,7 +50,8 @@ Route::get('/content/filter', [ContentController::class, 'filter'])->name('conte
 Route::get('/download/{id}', [ContentController::class, 'download'])->name('content.download');
 
 //edit profil
-Route::get('/editprofil', [editprofil::class, 'show']);
+Route::get('/profil/edit', [editprofil::class, 'edit'])->name('profile.edit');
+Route::put('/profil/update', [editprofil::class, 'update'])->name('profile.update');
 
 
 
