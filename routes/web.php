@@ -1,10 +1,12 @@
 <?php
 
 use App\Models\isiContent;
+use App\Http\Controllers\editprofil;
+use App\Http\Controllers\Landingpage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContentController;
-use App\Http\Controllers\editprofil;
+use App\Http\Controllers\Eventcontroller;
 use App\Http\Controllers\RegisterController;
 
 
@@ -19,7 +21,7 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', [ContentController::class, 'index']);
+Route::get('/', [Landingpage::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
@@ -33,11 +35,11 @@ Route::post('/register', [RegisterController::class, 'store'])->middleware('gues
 
 
 
-Route::get('/beranda', [ContentController::class, 'index'])->middleware('guest');
+Route::get('/koleksi', [ContentController::class, 'index']);
 
 
 //halaman single post
-Route::get('/konten/{isiContent:slug}', [ContentController::class, 'show']);
+Route::get('/koleksi/{isiContent:slug}', [ContentController::class, 'show']);
 
 
 
@@ -47,11 +49,22 @@ Route::get('/content/filter', [ContentController::class, 'filter'])->name('conte
 
 
 //rute download
-Route::get('/download/{id}', [ContentController::class, 'download'])->name('content.download');
+Route::get('/download/{id}', [ContentController::class, 'download'])->middleware('auth')->name('content.download');
 
 //edit profil
 Route::get('/profil/edit', [editprofil::class, 'edit'])->name('profile.edit');
 Route::put('/profil/update', [editprofil::class, 'update'])->name('profile.update');
 
+
+//landing page
+Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');
+
+
+
+//halaman event
+Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
+
+//halaman single event
+Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->middleware('auth')->name('isiEvent');
 
 

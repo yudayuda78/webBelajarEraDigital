@@ -219,8 +219,10 @@ form{
     background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.463), rgba(255, 255, 255, 0.6));
     display: flex;
     justify-content: center;
-    position: relative;
-    margin-top: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 50;
 }
 
@@ -320,8 +322,11 @@ li {
         background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.463), rgba(255, 255, 255, 0.6));
         display: flex;
         justify-content: center;
-        position: relative;
-        margin-top: 90px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+ 
         z-index: 50;
     }
     
@@ -363,5 +368,17 @@ li {
 
     ul li button {
         width: 90%; /* Contoh: Mengubah lebar tombol */
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        /* margin-top: 90px; */
+        z-index: 50;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

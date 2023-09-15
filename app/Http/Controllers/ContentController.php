@@ -9,14 +9,15 @@ class ContentController extends Controller
 {
     public function index(){
         return view('beranda', [
-            "isiContent" => isiContent::all()
-    
+            "isiContent" => isiContent::all(),
+            'title' => 'Koleksi'
         ]);
     }
 
     public function show( isiContent $isiContent){
         return view('konten', [
-            "content" => $isiContent
+            "content" => $isiContent,
+            'title' => 'Koleksi'
         ]);
     }
 
@@ -31,7 +32,8 @@ class ContentController extends Controller
     }
 
     return view('beranda', [
-        "isiContent" => $isiContent
+        "isiContent" => $isiContent,
+        'title' => 'Koleksi'
     ]);
     }
 
