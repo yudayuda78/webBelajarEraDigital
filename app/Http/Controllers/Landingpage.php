@@ -10,7 +10,7 @@ class Landingpage extends Controller
     public function index()
     {
         return view('landingpage.landingpage', [
-            'title' => 'Landing Page'
+            'title' => 'Home'
         ]);
     }
 }

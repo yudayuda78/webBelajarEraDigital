@@ -65,6 +65,17 @@ li {
     margin-top: 60px;
 }
 
+.head1-content{
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: 1s;
+}
+
+.head1-content.muncul{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
 .head1-content h1{
     width: 40%;
     padding-top: 30px;
@@ -76,6 +87,7 @@ li {
 
 .head1-content button{
     width: 6rem;
+    background-color: #FF2851;
 }
 .head1-content button a{
     text-decoration: none;
@@ -85,11 +97,35 @@ li {
 }
 
 
+.illust1{
+    opacity: 0;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    height: 400px;
+    transition: 3s;
+}
+
+.illust1.muncul{
+    opacity: 1;
+}
+
+
 
 .head2{
     width: 100%;
     height: 30vh;
     background-color: #ffffff;
+}
+
+
+
+.head2-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .head2-content h1{
@@ -101,31 +137,159 @@ li {
     font-weight: bold;
     text-align: center;
     margin-top: -20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    height: 40px;
 }
 
-.head2-content p{
+.head2-content .head2p{
     width: 50%;
     color: #F8811D;
     padding-top: 30px;
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: 1s;
+}
+
+.head2-content .head2p.muncul{
+    width: 50%;
+    color: #F8811D;
+    padding-top: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 
 .head3{
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     background-color: #FF2851;
 }
+
+.head3-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.head3-content .koleksi{
+    width: 7rem;
+    background-color: #6CC23D;
+    border-color: #6CC23D;
+    margin-top: -30px;
+}
+
+
+
+.ayam{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffbdc9; */
+}
+
+/* //carousel */
+.your-class{
+    /* background-color: #01B8FA; */
+    width: 60%;
+    height: 8rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+ .myclass{
+    /* background-color: #6CC23D; */
+    width: 2rem;
+    height: 4rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}
+
+.myclass .wrapper-imgground{
+    width: 4rem;
+    height: 4rem;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.myclass .wrapper-imgground img{
+    width: 50px;
+    height: 50px;
+}
+
+.myclass a{
+    text-align: center;
+    /* background-color: #ffffff; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.myclass a:hover{
+    text-decoration: none;
+}
+
+
 
 .head4{
     width: 100%;
     height: 40vh;
     background-color: #FEFEFE;
+}
+
+#carouselExampleFade{
+    /* background-color: #01B8FA; */
+    /* width: 500px; */
+    height: 50vh;
+}
+
+.carousel-inner{
+    /* background-color: #6CC23D; */
+    height: 100%;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  }
+
+.item-car1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* background-color: #2A2B6C; */
+}
+
+.item1{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
+
+.item1 h1{
+    /* height: 100%; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .head5{
@@ -146,10 +310,7 @@ li {
     background-color: #6CC23D;
 }
 
-#carouselExampleAutoplaying{
-    background-color: #01B8FA;
-    /* width: 500px; */
-}
+
 
 
 
@@ -176,4 +337,24 @@ footer{
 
 .content-footer ul li a{
     text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Tambahkan aturan CSS yang ingin Anda gunakan untuk tampilan layar berukuran lebih kecil */
+    /* .carousel-inner{
+        display: flex;
+    }
+
+    .carousel-item{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    } */
+}
+
+@media screen and (max-width: 576px) {
+    /* Tambahkan aturan CSS yang lebih khusus untuk layar berukuran lebih kecil */
+   
 }
