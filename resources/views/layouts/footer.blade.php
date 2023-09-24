@@ -1,4 +1,4 @@
-<footer class="d-flex flex-lg-column justify-content-center" >
+<footer class="d-flex flex-lg-column justify-content-center">
     <div class="container">
         <div class="container">
             <div class="">
@@ -6,14 +6,15 @@
                     <div>
                         <div class="d-flex justify-content-start">
                             <a class="navbar-brand" href="/">
-                                <img src="asset/logo.webp" alt="Logo" width="50" height="50"
+                                <img src="{{ asset('asset/logo.webp') }}" alt="Logo" width="50" height="50"
                                     class="d-inline-block">
                             </a>
                             <h1><a href="/" class="brand text-light">Ticy Kit</a></h1>
                         </div>
                         <ul class="list-group">
-                            <li class="list-group">Mari jelajahi dan dapatkan solusi pendidikan terbaik untuk siswa anda</li>
-                            
+                            <li class="list-group">Mari jelajahi dan dapatkan solusi pendidikan terbaik untuk siswa anda
+                            </li>
+
                         </ul>
                     </div>
                     <div>
@@ -36,10 +37,15 @@
                     </div>
                     <div>
                         <h1>Media Sosial</h1>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
-                        <li><a href=""><img src="" alt=""></a></li>
+                        <div class="icon-medsos-wrapper">
+                            <li><a href="https://instagram.com/belajarera.digital
+                                " target="_blank"><img src="{{ asset('asset/instagram.webp') }}" alt=""></a></li>
+                            <li><a href="https://www.youtube.com/@BelajarEraDigital
+                                " target="_blank"><img src="{{ asset('asset/youtube.webp') }}" alt=""></a></li>
+                            <li><a href="https://t.me/eventBED
+                                " target="_blank"><img src="{{ asset('asset/telegram.webp') }}" alt=""></a></li>
+                            <li><a href="https://wa.link/000dnp" target="_blank"><img src="{{ asset('asset/whatsapp.webp') }}" alt=""></a></li>
+                        </div>
                     </div>
                 </div>
 

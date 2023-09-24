@@ -52,8 +52,8 @@ Route::get('/content/filter', [ContentController::class, 'filter'])->name('conte
 Route::get('/download/{id}', [ContentController::class, 'download'])->middleware('auth')->name('content.download');
 
 //edit profil
-Route::get('/profil/edit', [editprofil::class, 'edit'])->name('profile.edit');
-Route::put('/profil/update', [editprofil::class, 'update'])->name('profile.update');
+Route::get('/profil/edit', [Editprofil::class, 'edit'])->name('profile.edit');
+Route::put('/profil/update', [Editprofil::class, 'update'])->name('profile.update');
 
 
 //landing page
@@ -63,6 +63,7 @@ Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');
 
 //halaman event
 Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
+Route::get('/event/sertif', [Eventcontroller::class, 'showsertif'])->name('eventsertif');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->middleware('auth')->name('isiEvent');

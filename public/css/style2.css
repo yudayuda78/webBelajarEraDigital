@@ -195,6 +195,18 @@ li {
     background-color: #6CC23D;
     border-color: #6CC23D;
     margin-top: -30px;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: 1s;
+}
+
+.head3-content .koleksi.muncul{
+    width: 7rem;
+    background-color: #6CC23D;
+    border-color: #6CC23D;
+    margin-top: -30px;
+    opacity: 1;
+    transform: translate(0, 0px);
 }
 
 
@@ -206,6 +218,20 @@ li {
     justify-content: center;
     align-items: center;
     /* background-color: #ffbdc9; */
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: 1s;
+}
+
+.ayam.muncul{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffbdc9; */
+    opacity: 1;
+    transform: translate(0, 0px);
 }
 
 /* //carousel */
@@ -296,7 +322,22 @@ li {
     display: flex;
     flex-direction: column;
     width: 50%;
+    opacity: 1;
+    /* transform: translate(0, 50px); */
+    transition: 1s;
 }
+
+.item1.muncul{
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    opacity: 1;
+    transform: translate(0, 0px);
+    transition: 1s;
+}
+
+
 
 .item1 h1{
     /* height: 100%; */
@@ -471,6 +512,37 @@ li {
 }
 
 
+/* tombol WA */
+.tombolwa{
+    position: fixed;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    bottom: 80px;
+    right:10px;
+    z-index: 70;
+}
+
+.tombolwa a img{
+   width: 1.5rem;
+   height: 1.5rem;
+   list-style: none;
+}
+
+
+.tombolwa a{
+    list-style: none;
+    color: #f7f7f7;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;;
+}
+
+.tombolwa:hover a{
+    list-style: none;
+    text-decoration: none;
+}
 
 
 
@@ -500,6 +572,121 @@ footer{
 }
 
 
+.icon-medsos-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.icon-medsos-wrapper li a img{
+    width: 2em;
+    height: 2em;
+    margin-right: 2px;
+}
+
+
+
+/* content grid */
+.card-content-grid-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.card-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 0.2fr); /* 2 kolom dengan ukuran yang sama */
+    grid-template-rows: repeat(4, auto); /* 2 baris dengan ukuran yang disesuaikan dengan konten */
+    gap: 30px; /* Jarak antara grid item */
+}
+
+/* Gaya untuk grid-item (sesuaikan dengan kebutuhan Anda) */
+.card-content-item {
+    background-color: #ffffff;
+    color: #464646;
+    padding: 20px;
+    text-align: center;
+    width: 15rem;
+    height: 24rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* maintenance */
+.maintenance-page-wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.span-maintenance{
+    color: #F8811D;
+    font-weight: bold;
+}
+
+
+/* download-content */
+.download-content-wrapper{
+    margin-top: 80px;
+}
+
+.download-content{
+    display: flex;
+    justify-content: center;
+}
+
+.download-content img{
+    height: 50%;
+    width: 30%;
+    margin-right: 60px;
+}
+
+
+.download-content .deskripsi-content{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.download-content .deskripsi-content h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;   
+}
+
+.download-content .deskripsi-content h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    /* font-weight: bold; */
+}
+
+.download-content .deskripsi-content .download-button{
+    display: flex;
+    justify-content: center;
+}
+
+.download-content .deskripsi-content .download-button .download{
+    width: 90px;
+    margin-right: 30px;
+}
+
+.download-content .deskripsi-content .download-button .download a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.download-content .deskripsi-content .download-button .back a{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 @media screen and (max-width: 768px) {
     /* Tambahkan aturan CSS yang ingin Anda gunakan untuk tampilan layar berukuran lebih kecil */
@@ -696,6 +883,21 @@ footer{
         font-family: 'Roboto', sans-serif;
         font-size: 0.8rem;
         height: 40vh;
+    }
+
+    .card-content-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 0.2fr); /* 2 kolom dengan ukuran yang sama */
+        grid-template-rows: repeat(4, auto); /* 2 baris dengan ukuran yang disesuaikan dengan konten */
+        gap: 30px; /* Jarak antara grid item */
+    }
+    
+    /* Gaya untuk grid-item (sesuaikan dengan kebutuhan Anda) */
+    .card-content-item {
+        
+        width: 4rem;
+        height: 12rem;
+        
     }
 }
 

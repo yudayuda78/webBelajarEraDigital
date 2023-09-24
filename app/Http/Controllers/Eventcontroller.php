@@ -22,4 +22,10 @@ class Eventcontroller extends Controller
             'title' => 'Event'
         ]);
     }
+
+    public function showsertif(){
+        return view('comingsoon', [
+            'title' => 'Sertifikat Event'
+        ]);
+    }
 }

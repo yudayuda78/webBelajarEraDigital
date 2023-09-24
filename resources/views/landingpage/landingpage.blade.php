@@ -223,7 +223,7 @@
                                 </div>
                                 <div class="grid-item">
                                     <div class="img-wrap">
-                                        <img src="" alt="">
+                                        <img src="asset/PraktisdanEfisien.webp" alt="">
                                     </div>
                                     <div class="content-belajar-wrap">
                                         <h2>Praktis dan Efisien</h2>
@@ -232,7 +232,7 @@
                                 </div>
                                 <div class="grid-item">
                                     <div class="img-wrap">
-                                        <img src="" alt="">
+                                        <img src="asset/MateriSesuaiUsia.webp" alt="">
                                     </div>
                                     <div class="content-belajar-wrap">
                                         <h2>Materi Sesuai Usia</h2>
@@ -241,7 +241,7 @@
                                 </div>
                                 <div class="grid-item">
                                     <div class="img-wrap">
-                                        <img src="" alt="">
+                                        <img src="asset/DesainMenarik.webp" alt="">
                                     </div>
                                     <div class="content-belajar-wrap">
                                         <h2>Desain Menarik</h2>
@@ -354,6 +354,7 @@
 
     </div>
 
+    @include('tombolwa')
     @include('layouts.footer')
 
 
@@ -378,9 +379,23 @@
 
         window.addEventListener('scroll', function() {
             const parallax = document.querySelector('.head1');
+            const tombolKoleksi = document.querySelector('.koleksi');
+            const sideScroll1 = document.querySelector('.ayam');
+            const head4 = document.querySelector('.item1');
             let scrollPosition = window.pageYOffset;
             console.log(scrollPosition);
-            // parallax.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+
+            console.log(head4);
+            // tombolKoleksi.style.transform = 'translateY(' + scrollPosition+304 * 0.5 + 'px)';
+            if(scrollPosition >=230){
+                tombolKoleksi.classList.add('muncul');
+            }
+            if(scrollPosition >=235){
+                sideScroll1.classList.add('muncul');
+            }
+            // if(scrollPosition ==130){
+            //     head4.classList.add('muncul');
+            // }
         });
 
         window.onload = (event) => {

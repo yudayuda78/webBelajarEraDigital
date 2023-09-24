@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <div class="container-fluid d-flex align-items-center">
-            <a class="navbar-brand" href="/">
-                <img src="asset/logo.webp" alt="Logo" width="35" height="35" class="d-inline-block">
+            <a class="navbar-brand fw-bold" href="/">
+                <img src="{{ asset('asset/logo.webp') }}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top"> TicyKit
             </a>
             <button class="navbar-toggler mt-auto ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -17,24 +17,24 @@
                 <div class="offcanvas-body">
 
                     <ul class="nav ml-auto navbar-nav flex-grow-1 pe-3">
-                        <li class="nav-item d-flex ">
+                        <li class="nav-item flex-column ">
                             <a class="nav-link mt-auto align-text-top text-light" href="/koleksi" aria-expanded="page">
                                 Koleksi
                             </a>
                         </li>
 
-                        <li class="nav-item dropdown d-flex show">
+                        <li class="nav-item dropdown flex-colum show">
                             <a class="nav-link dropdown-toggle mt-auto align-text-top text-light" href="/event"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="page">
                                 Event
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/event">Info Event</a></li>
-                                <li><a class="dropdown-item" href="#">Sertifikat</a></li>
+                                <li><a class="dropdown-item" href="/event/sertif">Sertifikat</a></li>
                             </ul>
                         </li>
 
-                        <li class="nav-item dropdown d-flex show">
+                        <li class="nav-item dropdown flex-colum show">
                             <a class="nav-link dropdown-toggle mt-auto align-text-top text-light" href="#"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="page">
                                 Hubungi
@@ -68,7 +68,7 @@
                             </li>
                         </ul>
                     @else
-                        <div class="d-flex button-login p-1 mt-auto ms-auto">
+                        <div class="flex-column button-login p-1 mt-auto ms-auto">
                             <a href="/login"><button class="btn btn-outline-light" type="submit">Login</button></a>
                         </div>
                     @endauth
