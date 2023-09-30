@@ -15,7 +15,7 @@
                     <div><img src="asset/bunga.webp" alt=""></div>
                 </div>
             </div>
-            <img src="asset/background2.webp" alt="" class="bg">
+            <img src="asset/back.webp" alt="" class="bg">
             <img src="asset/burung.webp" alt="" class="burung">
             <form action="/login" method="POST">
                 @csrf

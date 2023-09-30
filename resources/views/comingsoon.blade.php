@@ -7,7 +7,7 @@
                 <h1><span class="span-maintenance"></span></h1>
 
             </div>
-            <button type="button" class="maintenance-button btn btn-danger rounded-pill "><a href="/"
+            <button type="button" class="maintenance-button btn btn-danger rounded-pill "><a href="{{ url('/') }}"
                     class="text-light text-center">Back</a></button>
         </div>
 

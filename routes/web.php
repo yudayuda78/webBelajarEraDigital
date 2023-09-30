@@ -6,6 +6,7 @@ use App\Http\Controllers\Landingpage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContentController;
+use App\Http\Controllers\Editpassword;
 use App\Http\Controllers\Eventcontroller;
 use App\Http\Controllers\RegisterController;
 
@@ -55,6 +56,9 @@ Route::get('/download/{id}', [ContentController::class, 'download'])->middleware
 Route::get('/profil/edit', [Editprofil::class, 'edit'])->name('profile.edit');
 Route::put('/profil/update', [Editprofil::class, 'update'])->name('profile.update');
 
+//edit password
+Route::get('/password/edit', [Editpassword::class, 'edit'])->name('password.edit');
+Route::put('/password/update', [Editpassword::class, 'update'])->name('password.update');
 
 //landing page
 Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');

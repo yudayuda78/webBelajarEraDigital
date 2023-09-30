@@ -26,36 +26,36 @@ class ContentController extends Controller
 
     public function filter(Request $request)
     {
-        $category = $request->input('category');
-        $kelas = $request->input('kelas');
+        // $category = $request->input('category');
+        // $kelas = $request->input('kelas');
         
-        $isiContent = isiContent::query();
+        // $isiContent = isiContent::query();
     
-        if ($category) {
-            $isiContent->where('category', $category);
-        }
+        // if ($category) {
+        //     $isiContent->where('category', $category);
+        // }
         
-        if ($kelas) {
-            $isiContent->where('kelas', $kelas);
-        }
+        // if ($kelas) {
+        //     $isiContent->where('kelas', $kelas);
+        // }
     
-        $isiContent = $isiContent->get();
+        // $isiContent = $isiContent->get();
     
-        return view('content', compact('isiContent'));
+        // return view('layouts.content', compact('isiContent'));
 
 
-    // $category = $request->category;
+    $category = $request->category;
 
-    // if ($category) {
-    //     $isiContent = isiContent::where('category', $category)->get();
-    // } else {
-    //     $isiContent = isiContent::all();
-    // }
+    if ($category) {
+        $isiContent = isiContent::where('category', $category)->get();
+    } else {
+        $isiContent = isiContent::all();
+    }
 
-    // return view('beranda', [
-    //     "isiContent" => isiContent::all(),
-    //     'title' => 'Koleksi'
-    // ]);
+    return view('beranda', [
+        "isiContent" => isiContent::all(),
+        'title' => 'Koleksi'
+    ]);
     }
 
     public function download($id)

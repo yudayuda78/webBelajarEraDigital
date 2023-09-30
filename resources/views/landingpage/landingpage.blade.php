@@ -48,9 +48,9 @@
                                     <p><a href="" class="text-light">Worksheet</a></p>
                                 </div>
                                 <div class="myclass">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""
+                                    <div class="wrapper-imgground"><img src="asset/lessonplan.webp" alt=""
                                             class="imground"></div>
-                                    <p><a href="" class="text-light">Workbook</a></p>
+                                    <p><a href="" class="text-light">lessonplan</a></p>
                                 </div>
                                 <div class="myclass">
                                     <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""
@@ -58,7 +58,7 @@
                                     <p><a href="" class="text-light">Activity book</a></p>
                                 </div>
                                 <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
+                                    <div class="wrapper-imgground"><img src="asset/busypage.webp" alt=""></div>
                                     <p><a href="" class="text-light">Busy page</a></p>
                                 </div>
                                 <div class="myclass" class="imground">
@@ -66,65 +66,14 @@
                                     <p><a href="" class="text-light">Poster edukasi</a></p>
                                 </div>
                                 <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
-                                    <p><a href="" class="text-light">Games edukasi</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
-                                    <p><a href="" class="text-light">Worksheet</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
-                                    <p><a href="" class="text-light">Lesson plans</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
-                                    <p><a href="" class="text-light">Worksheet</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt=""></div>
-                                    <p><a href="" class="text-light">Hands on activities/ DIY</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Stories book</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Online exercises</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Modul proyek</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
+                                    <div class="wrapper-imgground"><img src="asset/modulajar.webp" alt=""></div>
                                     <p><a href="" class="text-light">Modul ajar</a></p>
                                 </div>
                                 <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Diklat dan event</a></p>
+                                    <div class="wrapper-imgground"><img src="asset/achive.webp" alt=""></div>
+                                    <p><a href="" class="text-light">Online Exerceis</a></p>
                                 </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Diklat dan event</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Ecourse</a></p>
-                                </div>
-                                <div class="myclass" class="imground">
-                                    <div class="wrapper-imgground"><img src="asset/storiesbook.webp" alt="">
-                                    </div>
-                                    <p><a href="" class="text-light">Rapor proyek</a></p>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -157,11 +106,10 @@
                     <div class="container">
                         <div class="container item-car1">
                             <div class="item1">
-                                <h1 class="text-dark"> DIY</h1>
-                                <p>Worksheet Printable adalah alat pendidikan yang praktis dan mudah digunakan yang
-                                    dirancang
-                                    untuk
-                                    mendukung proses pembelajaran di berbagai tingkatan pendidikan</p>
+                                <h1 class="text-dark"> Poster edukasi</h1>
+                                <p>Poster edukasi adalah media visual berupa gambar, teks, dan elemen-elemen grafis lainnya
+                                    yang digunakan untuk menyampaikan informasi atau materi pelajaran kepada siswa
+                                </p>
                                 <button type="button" class="head1-button btn btn-danger rounded-pill "><a
                                         href="/koleksi" class="text-light text-center">Kunjungi</a></button>
                             </div>
@@ -175,11 +123,9 @@
                     <div class="container">
                         <div class="container item-car1">
                             <div class="item1">
-                                <h1 class="text-dark"> DIY</h1>
-                                <p>Worksheet Printable adalah alat pendidikan yang praktis dan mudah digunakan yang
-                                    dirancang
-                                    untuk
-                                    mendukung proses pembelajaran di berbagai tingkatan pendidikan</p>
+                                <h1 class="text-dark"> Stories book</h1>
+                                <p>Stories book adalah buku yang berisi cerita atau kumpulan cerita yang dirancang khusus untuk digunakan dalam konteks pembelajaran.
+                                </p>
                                 <button type="button" class="head1-button btn btn-danger rounded-pill "><a
                                         href="/koleksi" class="text-light text-center">Kunjungi</a></button>
                             </div>
@@ -387,10 +333,10 @@
 
             console.log(head4);
             // tombolKoleksi.style.transform = 'translateY(' + scrollPosition+304 * 0.5 + 'px)';
-            if(scrollPosition >=230){
+            if (scrollPosition >= 230) {
                 tombolKoleksi.classList.add('muncul');
             }
-            if(scrollPosition >=235){
+            if (scrollPosition >= 235) {
                 sideScroll1.classList.add('muncul');
             }
             // if(scrollPosition ==130){
@@ -434,8 +380,8 @@
                     {
                         breakpoint: 480,
                         settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
+                            slidesToShow: 2,
+                            slidesToScroll: 2
                         }
                     }
                     // You can unslick at a given breakpoint now by adding:

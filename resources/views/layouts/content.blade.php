@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="">
+    {{-- <div class="">
         <form action="{{ route('content.filter') }}" method="get">
             <select name="category" class="btn btn-secondary">
                 <option value="">All Categories</option>
@@ -11,7 +11,7 @@
                 <option value="bahan ajar" {{ request('category') == 'bahan ajar' ? 'selected' : '' }}>Bahan Ajar
                 </option>
             </select>
-            {{-- <button type="submit" class="btn btn-primary">Filter</button> --}}
+            
         </form>
 
         <form action="{{ route('content.filter') }}" method="get">
@@ -31,9 +31,9 @@
                 <option value="sma kelas 2">SMA Kelas 2</option>
                 <option value="sma kelas 3">SMA Kelas 3</option>
             </select>
-            {{-- <button type="submit" class="btn btn-primary">Filter</button> --}}
+           
         </form>
-    </div>
+    </div> --}}
 
 
 

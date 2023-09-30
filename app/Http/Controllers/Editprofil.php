@@ -12,7 +12,7 @@ class editprofil extends Controller
     public function edit()
     {
         $user = Auth::user();
-        return view('maintenance', compact('user'), [
+        return view('user.editprofil', compact('user'), [
             'title' => 'Edit Profil'
         ]);
         
@@ -23,7 +23,7 @@ class editprofil extends Controller
         $user = User::find(Auth::user()->id);
         
         $request->validate([
-            'username' => 'required|max:255|unique:users, username, ' .$user->id,
+            // 'username' => 'required|max:255|unique:users, username, ' .$user->id,
             'email' => 'required|email:dns',
             'namalengkap' => 'required|max:255',
             'nomortelepon' => 'required',
@@ -33,14 +33,15 @@ class editprofil extends Controller
 
     
 
-        $user->email = $request->input('email');
-        $user->namalengkap = $request->input('namalengkap');
-        $user->nomortelepon = $request->input('nomortelepon');
+        $user->email = $request->email;
+        $user->namalengkap = $request->namalengkap;
+        $user->nomortelepon = $request->nomortelepon;
+        $user->pekerjaan = $request->pekerjaan;
 
         $user->save();
 
-        return redirect()->route('profil.edit')->with('updateberhasil', 'Profil berhasil diperbarui.');
-        // dd(User::where('id', Auth::id())->first());
+        return redirect()->route('profile.edit')->with('updateberhasil', 'Profil berhasil diperbarui.');
+        // dd('its work');
 
         
     }

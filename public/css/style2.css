@@ -589,6 +589,7 @@ footer{
 .card-content-grid-wrapper{
     display: flex;
     justify-content: center;
+    margin-top: 80px;
 }
 
 .card-content-grid {
@@ -882,22 +883,50 @@ footer{
         color: white;
         font-family: 'Roboto', sans-serif;
         font-size: 0.8rem;
-        height: 40vh;
+        height: 50vh;
+    }
+
+    .content-footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-medsos-wrapper{
+        display: flex;
+        justify-content: start;
     }
 
     .card-content-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 0.2fr); /* 2 kolom dengan ukuran yang sama */
-        grid-template-rows: repeat(4, auto); /* 2 baris dengan ukuran yang disesuaikan dengan konten */
-        gap: 30px; /* Jarak antara grid item */
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        gap: 20px;
+    }
+
+    .card-content-item {
+        /* Sesuaikan ukuran, padding, atau gaya lain sesuai kebutuhan Anda */
+    }
+
+    .card-content-grid-wrapper{
+        margin-top: 100px;
+        
+    }
+
+    .download-content .deskripsi-content h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;   
     }
     
-    /* Gaya untuk grid-item (sesuaikan dengan kebutuhan Anda) */
-    .card-content-item {
-        
-        width: 4rem;
-        height: 12rem;
-        
+    .download-content .deskripsi-content h2{
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8rem;
+        text-align: justify;
+        /* font-weight: bold; */
+    }
+
+    .download-content-wrapper{
+        margin-top: 80px;
+        height: 50vh;
     }
 }
 
