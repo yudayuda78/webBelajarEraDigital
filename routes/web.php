@@ -9,6 +9,7 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\Editpassword;
 use App\Http\Controllers\Eventcontroller;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SertifController;
 
 
 /*
@@ -67,7 +68,7 @@ Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');
 
 //halaman event
 Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
-Route::get('/event/sertif', [Eventcontroller::class, 'showsertif'])->name('eventsertif');
+Route::get('/event/sertif', [SertifController::class, 'showsertif'])->name('eventsertif');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->middleware('auth')->name('isiEvent');
