@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
-use setasign\Fpdi;
-use Spatie\PdfToImage\Pdf;
+
+use PDF;
 
 class SertifController extends Controller
 {
@@ -19,20 +19,30 @@ class SertifController extends Controller
         ]);
     }
 
-    public function generate(){
-        // Tentukan lokasi gambar PNG yang ingin Anda konversi
-        $pngImagePath = public_path('templateSertif/example.png');
-        
-        // Tentukan lokasi file PDF yang akan dihasilkan
-        $pdfPath = public_path('pdfs/converted.pdf');
+    public function generate($id){
+        $sertifikat = DB::table('sertifikat1')->where('id', $id)->first();
 
-        // Buat objek PDF dari gambar PNG
-        $pdf = new Pdf($pngImagePath);
+        if ($sertifikat) {
+            $nama = $sertifikat->nama;
+            $instansi = $sertifikat->instansi;
 
-        // Simpan gambar PNG sebagai file PDF
-        $pdf->saveAs($pdfPath);
+            // Path menuju gambar template PNG
+            $templateImage = public_path('template/templateSertif.png');
+            
 
-        // Pengembalian file PDF yang telah dihasilkan
-        return response()->download($pdfPath)->deleteFileAfterSend(true);
+            $html = '<img src="' . $templateImage . '" style="width:100%;" />';
+            $html .= "<h1>Nama: $nama</h1><p>Instansi: $instansi</p>";
+            
+            $pdf = PDF::loadHTML($html);
+
+
+            $filename = 'sertifikat_' . $nama . '.pdf';
+            
+
+            // Mengatur header HTTP untuk nama file
+            return $pdf->stream($filename, array('Attachment' => 0));
+        } else {
+            return "Sertifikat tidak ditemukan.";
+        }
     }
 }

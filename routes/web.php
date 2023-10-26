@@ -69,6 +69,7 @@ Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');
 //halaman event
 Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
 Route::get('/event/sertif', [SertifController::class, 'showsertif'])->name('eventsertif');
+Route::get('sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->middleware('auth')->name('isiEvent');

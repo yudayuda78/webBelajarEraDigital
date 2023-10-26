@@ -17,13 +17,15 @@
                     <td>{{ $data->nama }}</td>
                     <td>{{ $data->instansi }}</td>
                     <td></td>
-                    <td><button><a href="sertifikat/download/{{ $data->id }}">Download</a></button></td>
+                    <td><button><a href="{{ route('sertif.download', ['id' => $data->id]) }}">Download</a></button></td>
                 </tr>
             @endforeach
         </tbody>
         </thead>
     </table>
 
+    
+    
 
     @include('tombolwa')
     @include('layouts.footer')

@@ -15,7 +15,7 @@
         "laravel/tinker": "^2.5",
         "setasign/fpdf": "^1.8",
         "setasign/fpdi": "^2.5",
-        "spatie/pdf-to-image": "^1.2"
+        "spatie/pdf-to-image": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
