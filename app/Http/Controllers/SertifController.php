@@ -27,11 +27,27 @@ class SertifController extends Controller
             $instansi = $sertifikat->instansi;
 
             // Path menuju gambar template PNG
-            $templateImage = public_path('template/templateSertif.png');
+            $templateImage = public_path('templateSertif/agus2.jpg');
             
 
-            $html = '<img src="' . $templateImage . '" style="width:100%;" />';
-            $html .= "<h1>Nama: $nama</h1><p>Instansi: $instansi</p>";
+//             $html ="<style> 
+// @page {
+//     margin-top:130px;
+// }
+// body {
+    
+//     background-color: red;
+//     position: absolute;
+//     left: 0px;
+// }
+
+// </style>";
+            
+            $html = '<img src="' . $templateImage . '" style="margin-top:-50px;margin-left:-50px;background-color:red;position:absolute; left:0px;max-width:115%; max-height:115%; z-index:10;" />';
+            // $html .= '<h1 style="position:absolute">ayam<h1>';
+            $html .= '<h3 style="position:absolute;left:50%;margin-left:-50px;top:110px;z-index:50; font-family:poppins; font-size:36px;">' . $nama . '</h3>';
+            $html .= '<h5 style="position:absolute;left:50%;margin-left:-50px;top:130px;z-index:50; font-family:poppins; font-size:30px;">' .$instansi . '</h5>';
+            // dd($html);
             
             $pdf = PDF::loadHTML($html);
 
