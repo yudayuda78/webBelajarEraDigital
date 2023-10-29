@@ -4,16 +4,19 @@
     @include('layouts.navbar')
 
 
-    <div class="card-content">
+    <div class="event-grid">
         @foreach ($isiEvent as $isi)
-            <div class="card col-1" style="">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text"><a href="/event/{{ $isi->slug }}">{{ $isi->judul }}</a></p>
-                </div>
+        <div class="card-event">
+            <a href="/event/{{ $isi->slug }}"><img src="/img/{{ $isi->image }}" alt="Denim Jeans" style="width:100%"></a>
+            <div class="text-event-wrapper">
+                <p class="tags-event">Career Expo</p>
+                <a href="/event/{{ $isi->slug }}" class="judul-event">{{ $isi->judul }}</a>
+                <p class="tangal-event">27 Juli 2023 <b>(Sudah Selesai)</b></p>
             </div>
+        </div>
         @endforeach
     </div>
+
 
 
     @include('layouts.footer')

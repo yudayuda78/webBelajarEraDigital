@@ -1,3 +1,25 @@
+<div class="hero-image-koleksi">
+    <div class="headlines-wrapper-koleksi">
+    <p class="koleksi-h1">
+        Download Semua <b>Resource</b> yang Anda  butuhkan, <b>Gratis!</b>
+    </p>
+    <p class="koleksi-p">
+        It is a long established fact that a reader distracted by the readable content of a page when looking at its layout.
+    </p>
+    </div>
+    <div class="search-bar">
+        <form action="">
+            <input type="text" placeholder="Modul Ajar Kelas 6 SD">
+            <button><i class="fa fa-search" style="font-size: 16px"></i> Search</button>
+        </form>
+    </div>
+  </div>
+  </div>
+  <div class="info-diskon-wrapper" data-aos="fade-up">
+    <div class="info-diskon">
+        <h4>🤩 Buruan Download Mumpung <b>Semua Masih Free!</b> 🤩  </h4>
+    </div>
+  </div>
 <div class="container">
     {{-- <div class="">
         <form action="{{ route('content.filter') }}" method="get">
@@ -35,9 +57,7 @@
         </form>
     </div> --}}
 
-
-
-
+    
     <div class="content-grid">
 
         <div class="card-content-grid-wrapper">
@@ -46,7 +66,7 @@
                     <div class="card-content-item" style="">
                         <a href="/koleksi/{{ $isi->slug }}">
                             <img src="img/{{ $isi->image }}" class="card-img-top" alt="...">
-                            <div class="card-body">
+                            <div class="card-body" style="padding-top: 10px">
                                 <p class="card-text">{{ $isi->title }}</p>
                             </div>
                         </a>
@@ -55,11 +75,11 @@
             </div>
         </div>
 
-
+<br>
         <div class="d-flex justify-content-center">
             {{ $isiContent->links() }}
         </div>
-
+        <br>
 
     </div>
 </div>

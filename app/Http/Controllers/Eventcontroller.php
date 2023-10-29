@@ -10,7 +10,7 @@ class Eventcontroller extends Controller
     //
     public function index()
     {
-        return view('comingsoon', [
+        return view('event.index', [
             'title' => 'Event',
             'isiEvent' => Event::all()
         ]);

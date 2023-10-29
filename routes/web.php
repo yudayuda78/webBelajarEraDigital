@@ -72,6 +72,6 @@ Route::get('/event/sertif', [SertifController::class, 'showsertif'])->name('even
 Route::get('sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
 
 //halaman single event
-Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->middleware('auth')->name('isiEvent');
+Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('isiEvent');
 
 

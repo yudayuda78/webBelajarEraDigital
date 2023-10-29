@@ -70,7 +70,7 @@
                         </ul>
                     @else
                         <div class="flex-column button-login p-1 mt-auto ms-auto">
-                            <a href="/login"><button class="btn btn-outline-light" type="submit">Login</button></a>
+                            <a href="/login"><button class="btn btn-dark" type="submit"><i class ="ri-user-3-line"></i> Login</button></a>
                         </div>
                     @endauth
 
