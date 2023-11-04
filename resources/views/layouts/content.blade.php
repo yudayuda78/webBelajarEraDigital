@@ -4,12 +4,12 @@
         Download Semua <b>Resource</b> yang Anda  butuhkan, <b>Gratis!</b>
     </p>
     <p class="koleksi-p">
-        It is a long established fact that a reader distracted by the readable content of a page when looking at its layout.
+        Cari berdasarkan jenjang atau mata pelajaran yang anda butuhkan.
     </p>
     </div>
     <div class="search-bar">
-        <form action="">
-            <input type="text" placeholder="Modul Ajar Kelas 6 SD">
+        <form action="{{ route('content.search') }}" method="GET">
+            <input type="search" name="search" placeholder="Cari bahan ajar disini">
             <button><i class="fa fa-search" style="font-size: 16px"></i> Search</button>
         </form>
     </div>
@@ -64,8 +64,8 @@
             <div class="card-content-grid">
                 @foreach ($isiContent as $isi)
                     <div class="card-content-item" style="">
-                        <a href="/koleksi/{{ $isi->slug }}">
-                            <img src="img/{{ $isi->image }}" class="card-img-top" alt="...">
+                        <a href="/ticykit/koleksi/{{ $isi->slug }}">
+                            <img src="{{ asset('img/'. $isi->image) }}" class="card-img-top" alt="...">
                             <div class="card-body" style="padding-top: 10px">
                                 <p class="card-text">{{ $isi->title }}</p>
                             </div>

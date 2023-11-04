@@ -10,7 +10,7 @@ use App\Http\Controllers\Editpassword;
 use App\Http\Controllers\Eventcontroller;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SertifController;
-
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +23,14 @@ use App\Http\Controllers\SertifController;
 |
 */
 
+//root landingpage BED
 Route::get('/', [Landingpage::class, 'index']);
 
+// event BED
+Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
+
+
+//login
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
@@ -35,13 +41,20 @@ Route::get('/register', [RegisterController::class, 'index'])->middleware('guest
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 
 
+//edit profil
+Route::get('/profil/edit', [Editprofil::class, 'edit'])->name('profile.edit');
+Route::put('/profil/update', [Editprofil::class, 'update'])->name('profile.update');
+
+//edit password
+Route::get('/password/edit', [Editpassword::class, 'edit'])->name('password.edit');
+Route::put('/password/update', [Editpassword::class, 'update'])->name('password.update');
 
 
-Route::get('/koleksi', [ContentController::class, 'index']);
-
+Route::get('ticykit/koleksi', [ContentController::class, 'index']);
+Route::get('ticykit/koleksi/search', [ContentController::class, 'search'])->name('content.search');
 
 //halaman single post
-Route::get('/koleksi/{isiContent:slug}', [ContentController::class, 'show']);
+Route::get('ticykit/koleksi/{isiContent:slug}', [ContentController::class, 'show']);
 
 
 
@@ -51,27 +64,49 @@ Route::get('/content/filter', [ContentController::class, 'filter'])->name('conte
 
 
 //rute download
+
 Route::get('/download/{id}', [ContentController::class, 'download'])->middleware('auth')->name('content.download');
 
-//edit profil
-Route::get('/profil/edit', [Editprofil::class, 'edit'])->name('profile.edit');
-Route::put('/profil/update', [Editprofil::class, 'update'])->name('profile.update');
-
-//edit password
-Route::get('/password/edit', [Editpassword::class, 'edit'])->name('password.edit');
-Route::put('/password/update', [Editpassword::class, 'update'])->name('password.update');
 
 //landing page
-Route::get('/landingpage', [Landingpage::class, 'index'])->name('Landingpage');
+Route::get('/ticykit', [Landingpage::class, 'indexticykit'])->name('Landingpage');
 
 
 
 //halaman event
-Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
-Route::get('/event/sertif', [SertifController::class, 'showsertif'])->name('eventsertif');
-Route::get('sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
+// Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
+
+Route::get('/sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('isiEvent');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//search sertif
+Route::get('/sertifikat/16-19Oktober2023/search', [SertifController::class, 'search']);
+
+//Show abjad sertif
+Route::get('/sertifikat/16-19Oktober2023', [SertifController::class, 'showabjad'])->name('showabjad');
+
+
+//generate sertif
+Route::get('/event/sertif/abc', [SertifController::class, 'showsertif'])->name('eventsertif');
 
 

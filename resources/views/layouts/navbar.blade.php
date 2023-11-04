@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <div class="container-fluid d-flex align-items-center">
-            <a class="navbar-brand fw-bold" href="/">
+            <a class="navbar-brand fw-bold" href="/ticykit">
                 <img src="{{ asset('asset/logo.webp') }}" alt="Logo" width="35" height="35" class="d-inline-block align-text-top"> TicyKit
             </a>
             <button class="navbar-toggler mt-auto ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -18,21 +18,21 @@
 
                     <ul class="nav ml-auto navbar-nav flex-grow-1 pe-3">
                         <li class="nav-item flex-column ">
-                            <a class="nav-link mt-auto align-text-top text-light" href="/koleksi" aria-expanded="page">
+                            <a class="nav-link mt-auto align-text-top text-light" href="/ticykit/koleksi" aria-expanded="page">
                                 Koleksi
                             </a>
                         </li>
 
-                        <li class="nav-item dropdown flex-colum show">
+                        {{-- <li class="nav-item dropdown flex-colum show">
                             <a class="nav-link dropdown-toggle mt-auto align-text-top text-light" href="{{ url('/event') }}"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="page">
                                 Event
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/event">Info Event</a></li>
-                                <li><a class="dropdown-item" href="{{ url('/event/sertif') }}">Sertifikat</a></li>
+                                
                             </ul>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item dropdown flex-colum show">
                             <a class="nav-link dropdown-toggle mt-auto align-text-top text-light" href="#"
@@ -43,6 +43,12 @@
                                 <li><a class="dropdown-item" href="#">Admin Kegiatan</a></li>
                                 <li><a class="dropdown-item" href="#">Grup Whatsapp</a></li>
                             </ul>
+                        </li>
+
+                        <li class="nav-item flex-column ">
+                            <a class="nav-link mt-auto align-text-top text-light" href="/" aria-expanded="page">
+                                Website BED
+                            </a>
                         </li>
                     </ul>
 

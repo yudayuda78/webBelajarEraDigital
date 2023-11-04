@@ -18,6 +18,15 @@
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="{{ url('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css') }}" />
 
+    <link rel="preconnect" href="{{ url('https://fonts.googleapis.com') }}">
+    <link rel="preconnect" href="{{ url('https://fonts.gstatic.com') }}" crossorigin>
+    <link href="{{ url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap') }}" rel="stylesheet">
+
+    <!-- Link icon -->
+    <link rel="stylesheet" href="{{ url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css') }}" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css') }}" rel="stylesheet">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">

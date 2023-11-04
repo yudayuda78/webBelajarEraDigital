@@ -1,4 +1,6 @@
-@extends('layouts.main')
+@extends('home.home-layouts.home-main')
+
+<link rel="stylesheet" href="{{ asset('home-resource/css/login-register-style.css') }}">
 
 <style>
     .form-section {
@@ -11,28 +13,19 @@
 </style>
 
 @section('container')
-    <div class="background">
-        <section>
-            <div class="daun">
-                <div class="set">
-                    <div><img src="asset/daun2.webp" alt=""></div>
-                    <div><img src="asset/bunga.webp" alt=""></div>
-                    <div><img src="asset/daun2.webp" alt=""></div>
-                    <div><img src="asset/bunga.webp" alt=""></div>
-                    <div><img src="asset/daun2.webp" alt=""></div>
-                    <div><img src="asset/bunga.webp" alt=""></div>
-                    <div><img src="asset/daun2.webp" alt=""></div>
-                    <div><img src="asset/bunga.webp" alt=""></div>
-                </div>
-            </div>
-            <img src="asset/back.webp" alt="" class="bg">
-            <img src="asset/burung.webp" alt="" class="burung">
+@include('home.home-layouts.home-navbar')
+<style>
+        body {
+            background: #E8EEF0;
+        }
+</style>
+<div class="register-container">
             <form action="/register" method="POST" id="registerForm">
 
                 @csrf
 
                 <ul>
-                    <h1>Daftar</h1>
+                    <a href="/"><img class src="img/logo-login.png" alt=""><br></a>
                     <div class="form-section current" id="section1">
                         <!-- Langkah 1 -->
                         <!-- Form fields for username and password -->
@@ -101,23 +94,25 @@
                     </div>
                     <div class="form-navigation mt-3 next-prev-con">
                         <li>
-                            <button type="button" class="previous btn btn-primary next-prev">Previous</button>
+                            <button type="button" class="previous btn btn-primary next-prev">Previous</button> <button type="button" class="next btn btn-primary next-prev">Next</button> <button type="submit" class="btn btn-primary" id="submitButton"
+                            style="display: none;">Submit</button>
                         </li>
                         <li>
-                            <button type="button" class="next btn btn-primary next-prev">Next</button>
+                            
                         </li>
 
                     </div>
                     <div class="form-navigation mt-3 sub">
                         <li>
-                            <button type="submit" class="btn btn-primary" id="submitButton"
-                                style="display: none;">Submit</button>
+
                         </li>
                     </div>
-                    <li><a href="/login">Login</a></li>
+                </li>
+                <li class="emangtelat">Sudah punya akun?<a href="/login"> <b>Langsung Login Aja!</b></a></li>
                 </ul>
             </form>
         </section>
+    </div>
     </div>
 
     <script>

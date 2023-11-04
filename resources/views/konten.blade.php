@@ -15,7 +15,7 @@
                                 href="{{ route('content.download', ['id' => $content->id]) }}"
                                 class="text-light">Download</a></button>
 
-                        <button type="button" class="btn btn-danger rounded-pill back"><a href="/koleksi"
+                        <button type="button" class="btn btn-danger rounded-pill back"><a href="/ticykit/koleksi"
                                 class="text-light">Back</a></button>
                     </div>
                 </div>

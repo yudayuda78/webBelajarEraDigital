@@ -7,7 +7,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="cta-text">
                             <h4>Kantor</h4>
-                            <span>Jl. Konoha Mountain Pati Semarang</span>
+                            <span>Gunungpati, Semarang, Jawa Tengah</span>
                         </div>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
                         <i class="fas fa-phone"></i>
                         <div class="cta-text">
                             <h4>WhatsApp</h4>
-                            <span>+6289 8765 4321</span>
+                            <span>+6287 7656 76479</span>
                         </div>
                     </div>
                 </div>
@@ -25,7 +25,7 @@
                         <i class="far fa-envelope-open"></i>
                         <div class="cta-text">
                             <h4>Email</h4>
-                            <span>segondog@enak.tenan</span>
+                            <span>belajareradigital10@gmail.com</span>
                         </div>
                     </div>
                 </div>
@@ -39,8 +39,7 @@
                             <a href="index.html"><img src="/img/logo-footer.svg" class="img-fluid" alt="logo"></a>
                         </div>
                         <div class="footer-text">
-                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                            elit,Lorem ipsum dolor sit amet.</p>
+                            <p>TicyKit adalah Platform pendidikan yang menyediakan alat pembelajaran untuk para pendidik, siswa, dan orang tua yang mencari beragam kebutuhan untuk belajar, mengajar yang inovatif dan berkualitas                            </p>
                         </div>
                         {{-- <div class="footer-social-icon">
                             <span>Follow us</span>
@@ -56,15 +55,15 @@
                             <h3>Useful Links</h3>
                         </div>
                         <ul>
-                            <li><a href="#">Youtube</a></li>
-                            <li><a href="#">Koleksi</a></li>
-                            <li><a href="#">Instagram</a></li>
+                            <li><a href="https://www.youtube.com/@BelajarEraDigital">Youtube</a></li>
+                            <li><a href="/ticykit/koleksi">Koleksi</a></li>
+                            <li><a href="https://instagram.com/belajarera.digital">Instagram</a></li>
                             <li><a href="#">Info Event</a></li>
                             <li><a href="#">Facebook</a></li>
                             <li><a href="#">Tentang Kami</a></li>
-                            <li><a href="#">WhatsApp</a></li>
+                            <li><a href="https://t.me/grupeventBED">WhatsApp</a></li>
                             <li><a href="#">Sertifikat</a></li>
-                            <li><a href="#">Telegram</a></li>
+                            <li><a href="https://t.me/eventBED">Telegram</a></li>
                             <li><a href="#">Berita</a></li>
                         </ul>
                     </div>

@@ -1,8 +1,7 @@
-@extends('layouts.main2')
+@extends('home.home-layouts.home-main')
 
 @section('container')
-    @include('layouts.navbar')
-
+@include('home.home-layouts.home-navbar')
 
     <div class="title-event-container">
         <div class="title-event-wrapper">
@@ -17,7 +16,8 @@
                 <img src="{{ asset('img/' . $event->image) }}" alt="Denim Jeans" style="width:100%">
                 <p>Deskripsi Event</p>
                 {{ $event->copywriter}}
-                <a href="{{ url($event->link) }}">{{ $event->link }}</a>
+                <p>Daftar Disini</p>
+                <a target=blank href="{{ url($event->link) }}">{{ $event->link }} </a>
                 
             </div>
             <div class="flex-r">
@@ -26,12 +26,6 @@
         </div>
     </div>
 
-    <div class="card-content">
-        <img src="{{ asset('img/' . $event->image) }}" alt="kosong">
-        <h1>{{ $event->judul }}</h1>
-
-    </div>
-
-
-    @include('layouts.footer')
+    @include('home.home-layouts.home-kerjasama')
+    @include('home.home-layouts.home-footer')
 @endsection

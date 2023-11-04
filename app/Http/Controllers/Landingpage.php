@@ -9,8 +9,15 @@ class Landingpage extends Controller
     //
     public function index()
     {
-        return view('landingpage.landingpage', [
+        return view('home.home', [
             'title' => 'Home'
         ]);
+    }
+
+    public function indexticykit()
+    {
+        return view('ticykit-home.index', [
+            'title' => 'TicyKit'
+        ]); 
     }
 }

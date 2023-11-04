@@ -7,7 +7,8 @@ use App\Models\isiContent;
 
 class ContentController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
         $isiContent = isiContent::paginate(12);
 
@@ -17,7 +18,8 @@ class ContentController extends Controller
         ]);
     }
 
-    public function show( isiContent $isiContent){
+    public function show(isiContent $isiContent)
+    {
         return view('konten', [
             "content" => $isiContent,
             'title' => 'Koleksi'
@@ -28,34 +30,47 @@ class ContentController extends Controller
     {
         // $category = $request->input('category');
         // $kelas = $request->input('kelas');
-        
+
         // $isiContent = isiContent::query();
-    
+
         // if ($category) {
         //     $isiContent->where('category', $category);
         // }
-        
+
         // if ($kelas) {
         //     $isiContent->where('kelas', $kelas);
         // }
-    
+
         // $isiContent = $isiContent->get();
-    
+
         // return view('layouts.content', compact('isiContent'));
 
 
-    $category = $request->category;
+        $category = $request->category;
 
-    if ($category) {
-        $isiContent = isiContent::where('category', $category)->get();
-    } else {
-        $isiContent = isiContent::all();
+        if ($category) {
+            $isiContent = isiContent::where('category', $category)->get();
+        } else {
+            $isiContent = isiContent::all();
+        }
+
+        return view('beranda', [
+            "isiContent" => isiContent::all(),
+            'title' => 'Koleksi'
+        ]);
     }
 
-    return view('beranda', [
-        "isiContent" => isiContent::all(),
-        'title' => 'Koleksi'
-    ]);
+    public function search(Request $request)
+    {
+        $search = $request->input('search');
+        // Lakukan pencarian disini, misalnya dengan model Eloquent
+        $isiContent = isiContent::where('title', 'like', '%' . $search . '%')
+            ->orWhere('category', 'like', '%' . $search . '%')
+            ->paginate(12);
+
+        return view('beranda', compact('isiContent', 'search'), [
+            'title' => 'Koleksi'
+        ]);
     }
 
     public function download($id)
@@ -64,6 +79,4 @@ class ContentController extends Controller
         $pathToFile = public_path("file/{$filedownload->file}");
         return \Response::download($pathToFile);
     }
-
-
 }

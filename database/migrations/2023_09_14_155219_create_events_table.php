@@ -17,10 +17,11 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('judul');
             $table->string('slug')->unique();
-            $table->string('tanggal pelaksanaan');
+            $table->string('tanggalpelaksanaan');
             $table->string('copywriter');
             $table->string('link');
             $table->string('image');
+            $table->string('statuspelaksanaan');
 
             $table->timestamps();
         });
