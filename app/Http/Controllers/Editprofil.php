@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 
-class editprofil extends Controller
+class Editprofil extends Controller
 {
     //
     public function edit()

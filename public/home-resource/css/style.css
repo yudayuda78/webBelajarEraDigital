@@ -403,8 +403,9 @@
 }
 
 .kerjasama-box img{
-    width: 120px;
+    width: 120px !important;
 }
+
 .kerjasama-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -430,10 +431,6 @@
         gap: 10px;
         margin: auto;
         padding: 20px;
-    }
-
-    .kerjasama-box img{
-        width: 80px;
     }
 }
 
@@ -484,6 +481,7 @@
 }
 
 /* ISI EVENT */
+
 .title-event-container {
     background-color: #FFC107;
     padding-top: 80px;
@@ -522,8 +520,16 @@
     margin-top: 40px;
 }
 
+.flex-l {
+    margin-bottom: 30px;
+}
+
+.flex-r {
+    max-width: 350px;
+}
+
 .deskripsi-event-wrapper img {
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .deskripsi-event-wrapper p {
@@ -531,6 +537,34 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.list-group {
+
+    border-radius: 15px !important;
+    margin-bottom: 20px !important;
+}
+
+.card-join-event {
+    border-radius: 15px !important;
+    margin-bottom: 20px;
+}
+
+.join-event-text {
+    font-weight: normal !important;
+    font-size: 1rem !important;
+}
+
+.join-event-btn {
+    background-color: #063f5c !important;
+    border-radius: 8px !important;
+    border: none !important;
+}
+
+.list-group-item.active {
+    background-color: #063f5c !important;
+    border-color: #063f5c !important;
+}
+
 @media only screen and (max-width: 1060px) {
     .title-event-wrapper {
         margin-left: 20px;
@@ -553,10 +587,11 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-    .flex-r {
+}
+    /* .flex-r {
         display: none;
     }
-    }
+    } */
 
     /* SIDEBAR SOCIAL ICON */
     .s-media{
@@ -682,73 +717,39 @@
 
 /* SERTIKAT TABEL */
 
+.tablewrapper {
+    max-width: 1200px;
+    margin: auto;
+}
 
-
-.table-sertif {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: block;
-    width: 200px;
+.search-bar {
     margin-left: auto;
     margin-right: auto;
-}
-
-.mytable{
-    /* background-color: rgba(239, 0, 0, 0.333); */
-    width: 100%;
-    background: url(img/html_table.webp);
-}
-
-thead{
-    background-color: #fff4;
-    text-align: center;
-    position: sticky;
-}
-
-
-.tablewrapper{
-    height: 900px;
-    margin-top: 90px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 700px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    gap: 10px;
 }
 
-.tablewrapper .mytable{
-    background-color: #fff5;
-    width: 90%;
-    border-radius: .8rem;
+.btn-sertif {
+    font-size: 14px !important;
+    margin: 0px !important;
+    color: white !important;
+    border: 0px !important;
+    border-radius: 8px !important;
+    background-color: #063F5C !important;
+    
 }
 
-tbody{
-    background-color: #fffb;
-    border: 1px solid black;
-    text-align: center;
+.btn-sertif a {
+    margin: 0px !important;
+    color: white !important;
 }
 
-tr td {
-    border: 1px solid black;
-}
-
-tbody td{
-    /* color: white; */
-}
-tbody td button{
-    background-color: #86e49d !important;
-    border-radius: 30px;
-       
-}
-
-tbody td:nth-child(4) button{
-    background-color: #6fcaea !important;
-}
-
-.tablewrapper .mytable tbody td button a{
-    color: #006b21;
-    list-style: none;
-}
-
-.tablewrapper .mytable tbody td:nth-child(4) button a{
-    color: #06303f;
-    list-style: none;
+.tbld {
+    text-transform: uppercase !important;
+    vertical-align:middle !important;
+    padding: 4px !important;
+    font-size: 15px !important;
 }

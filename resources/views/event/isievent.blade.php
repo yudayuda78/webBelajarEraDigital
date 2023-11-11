@@ -16,12 +16,25 @@
                 <img src="{{ asset('img/' . $event->image) }}" alt="Denim Jeans" style="width:100%">
                 <p>Deskripsi Event</p>
                 {{ $event->copywriter}}
-                <p>Daftar Disini</p>
+                <p>Pembicara</p>
                 <a target=blank href="{{ url($event->link) }}">{{ $event->link }} </a>
-                
             </div>
             <div class="flex-r">
-                <img src="{{ asset('img/' . $event->image) }}" alt="Denim Jeans" style="width:100%">
+                <div class="card-join-event card">
+                    <div class="card-body">
+                      <p class="join-event-text card-text">Daftarkan diri anda pada <b>{{ $event->judul }}</b> pada link dibawah ini</p>
+                      <a href="{{ url($event->link) }}" class="join-event-btn btn btn-primary">Join Diklat</a>
+                    </div>
+                </div>
+                {{-- <br> --}}
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action {{-- active --}}">File Undangan</a>
+                    <a href="#" class="list-group-item list-group-item-action">Link Twibbon</a>
+                    <a href="#" class="list-group-item list-group-item-action">Link Fasilitas</a>
+                    <a href="#" class="list-group-item list-group-item-action">Jadwal (Rundown) </a>
+                    {{-- <a class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a> --}}
+                  </div>
+                {{-- <img src="{{ asset('img/' . $event->image) }}" alt="Denim Jeans" style="width:100%"> --}}
             </div>
         </div>
     </div>

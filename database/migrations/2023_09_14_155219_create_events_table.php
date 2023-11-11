@@ -22,7 +22,7 @@ class CreateEventsTable extends Migration
             $table->string('link');
             $table->string('image');
             $table->string('statuspelaksanaan');
-
+            $table->id('narasumber_id');
             $table->timestamps();
         });
     }

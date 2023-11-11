@@ -5,14 +5,17 @@
     <div class="title-event-container">
         <div class="title-event-wrapper">
           <p>Sertifikat</p>
-          <p>Diklat Nasional 32P Strategi Penerapan Asesmen dalam Kurikulum Merdeka Pelaksanaan 1-4 November 2023 </p>
+          <p>Diklat Nasional 32JP : Metode Pengajaran Asyik dengan Media Powerpoint Interaktif</p>
         </div>
       </div>
+
+      <div style="text-align: center;">
+        <iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/RMSJcOzb_Co?si=sL3CKW_73jhg0K-v" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe></div>
     
     <div class="tablewrapper">
         <table id="myTable" class="table table-striped">
             <div class="search-bar">
-                <form action="/sertifikat/16-19Oktober2023/search" method="GET">
+                <form action="/sertifikat/7-9November/search" method="GET">
                     <input class="form-control" type="search" name="search" placeholder="Cari nama anda disini">
                     <button class="btn-sertif btn btn-primary">Search</button>
                 </form>
@@ -28,11 +31,11 @@
             <tbody>
                 @foreach ($datas as $data)
                     <tr>
-                        <td>{{$loop->iteration}}</td>
+                        <td>{{ $data->id }}</td>
                         <td class="tbld">{{ $data->nama }}</td>
                         <td class="tbld">{{ $data->instansi }}</td>
                         <td class="tbld"><button class="btn-sertif btn btn-warning"><a href="{{ url('https://s.id/FasilNov1') }}" target="blank">Download</a></button></td>
-                        <td class="tbld"><button class="btn-sertif btn btn-warning"><a href="{{ route('sertif.download', ['id' => $data->id]) }}">Download</a></button></td>
+                        <td class="tbld"><button class="btn-sertif btn btn-warning"><a href="{{ route('sertif.download2', ['id' => $data->id]) }}">Download</a></button></td>
                     </tr>
                 @endforeach
             </tbody>

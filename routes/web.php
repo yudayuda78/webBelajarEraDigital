@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\isiContent;
-use App\Http\Controllers\editprofil;
+use App\Http\Controllers\Editprofil;
 use App\Http\Controllers\Landingpage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
@@ -77,6 +77,7 @@ Route::get('/ticykit', [Landingpage::class, 'indexticykit'])->name('Landingpage'
 // Route::get('/event', [Eventcontroller::class, 'index'])->name('event');
 
 Route::get('/sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
+Route::get('/sertifikat/download2/{id}', [SertifController::class, 'generate2'])->name('sertif.download2');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('isiEvent');
@@ -101,12 +102,13 @@ Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('is
 
 //search sertif
 Route::get('/sertifikat/16-19Oktober2023/search', [SertifController::class, 'search']);
+Route::get('/sertifikat/7-9November/search', [SertifController::class, 'search2']);
 
 //Show abjad sertif
 Route::get('/sertifikat/16-19Oktober2023', [SertifController::class, 'showabjad'])->name('showabjad');
 
 
 //generate sertif
-Route::get('/event/sertif/abc', [SertifController::class, 'showsertif'])->name('eventsertif');
-
+Route::get('/event/sertif/1-4November2023', [SertifController::class, 'showsertif'])->name('eventsertif');
+Route::get('/event/sertif/7-9November2023', [SertifController::class, 'showsertif2'])->name('eventsertif7-9nov');
 
