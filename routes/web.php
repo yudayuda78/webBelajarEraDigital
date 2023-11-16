@@ -78,6 +78,8 @@ Route::get('/ticykit', [Landingpage::class, 'indexticykit'])->name('Landingpage'
 
 Route::get('/sertifikat/download/{id}', [SertifController::class, 'generate'])->name('sertif.download');
 Route::get('/sertifikat/download2/{id}', [SertifController::class, 'generate2'])->name('sertif.download2');
+Route::get('/sertifikat/download3/{id}', [SertifController::class, 'generate3'])->name('sertif.download3');
+Route::get('/sertifikat/download1revisi/{id}', [SertifController::class, 'generate1revisi'])->name('sertif.download1revisi');
 
 //halaman single event
 Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('isiEvent');
@@ -103,6 +105,8 @@ Route::get('/event/{isiEvent:slug}', [Eventcontroller::class, 'show'])->name('is
 //search sertif
 Route::get('/sertifikat/16-19Oktober2023/search', [SertifController::class, 'search']);
 Route::get('/sertifikat/7-9November/search', [SertifController::class, 'search2']);
+Route::get('/sertifikat/9-11November/search', [SertifController::class, 'search3']);
+Route::get('/sertifikat/1-4November2023Revisi/search', [SertifController::class, 'search1rev']);
 
 //Show abjad sertif
 Route::get('/sertifikat/16-19Oktober2023', [SertifController::class, 'showabjad'])->name('showabjad');
@@ -111,4 +115,6 @@ Route::get('/sertifikat/16-19Oktober2023', [SertifController::class, 'showabjad'
 //generate sertif
 Route::get('/event/sertif/1-4November2023', [SertifController::class, 'showsertif'])->name('eventsertif');
 Route::get('/event/sertif/7-9November2023', [SertifController::class, 'showsertif2'])->name('eventsertif7-9nov');
+Route::get('/event/sertif/9-11November2023', [SertifController::class, 'showsertif3'])->name('eventsertif9-22nov');
+Route::get('/event/sertif/1-4November2023Revisi', [SertifController::class, 'showsertif1revisi'])->name('eventsertif1revisi');
 

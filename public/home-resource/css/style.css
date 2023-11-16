@@ -500,12 +500,12 @@
 
 .title-event-wrapper p:nth-child(1) {
     color: #828282;
-    font-size: 18px;
+    font-size: 16px;
 }
 .title-event-wrapper p:nth-child(2) {
     color: #1E1E1E; 
     font-weight: bold;
-    font-size: 24px;
+    font-size: 21px;
 }
 .deskripsi-event-container {
     display: block;
@@ -526,6 +526,7 @@
 
 .flex-r {
     max-width: 350px;
+    margin-bottom: 30px;
 }
 
 .deskripsi-event-wrapper img {
@@ -541,7 +542,6 @@
 .list-group {
 
     border-radius: 15px !important;
-    margin-bottom: 20px !important;
 }
 
 .card-join-event {
@@ -587,11 +587,7 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-}
-    /* .flex-r {
-        display: none;
     }
-    } */
 
     /* SIDEBAR SOCIAL ICON */
     .s-media{
@@ -732,6 +728,21 @@
     gap: 10px;
 }
 
+.btn-fasilitas {
+    font-size: 14px !important;
+    margin: 0px !important;
+    color: white !important;
+    border: 0px !important;
+    border-radius: 8px !important;
+    background-color: #FFC107 !important;
+    
+}
+
+.btn-fasilitas a {
+    margin: 0px !important;
+    color: black !important;
+}
+
 .btn-sertif {
     font-size: 14px !important;
     margin: 0px !important;
@@ -752,4 +763,46 @@
     vertical-align:middle !important;
     padding: 4px !important;
     font-size: 15px !important;
+}
+
+@media only screen and (max-width: 1060px) {
+    .tablewrapper {
+        max-width: 90% !important;
+    }
+}
+
+/* TUTORIAL UNDUH SERTIFIKAT */
+
+.video-sertif-container {
+    background-color: #E8EEF0;
+
+}
+.video-sertif-flex {
+    padding: 20px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.video-sertif-flex h1 {
+    font-size: 17px;
+    margin-bottom: 15px
+}
+
+.youtube-embed {
+    margin: auto;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+.event-lainnya {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    
 }
